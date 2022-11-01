@@ -339,7 +339,6 @@ def v_distribution(mean, std, sizes, dist_func = 'lognorm'):
 def breakup_distribution(d_0, U, props, \
                          Model_Core_Breakup = True, core_accel = False, \
                          dist_func = 'lognorm', dist_type = 'vol', unpack = 1):
-
     """
     Droplet breakup model from Jackiw & Ashgriz (2021, 2022)
         Inputs:
@@ -518,8 +517,8 @@ def breakup_distribution(d_0, U, props, \
 
 
 
-def twin_fluid_breakup_distribution(d_go, d_gi, u_g, u_l, props, dist_type = 'vol', freq = True):
-
+def twin_fluid_breakup_distribution(d_go, d_gi, u_g, u_l, props, \
+                                    dist_type = 'vol', freq = True, dist_func = 'lognorm'):
     """
     Twin-fluid distribution model from Jackiw & Ashgriz (2022a)
 
@@ -554,18 +553,19 @@ def twin_fluid_breakup_distribution(d_go, d_gi, u_g, u_l, props, dist_type = 'vo
 
             - freq : if TRUE, output frequency distribution, integrated using
                 histogram bins equivalent to those of the Malvern Spraytec output.
+                
+            - dist_func: either 'lognorm' or 'gamma'
 
     """
 
 
     rho_l, rho_g, mu_l, mu_g, sigma = props
 
-    #Kelvin-Helmholtz finite-shear layer(Aliseda / Raynal)
-    u_r = u_g - u_l
-    b_g = (d_go - d_gi) /2
-    C = 2.4
-    lam_KH = 2*C*(rho_l/rho_g)**0.5*(mu_g/rho_g/u_r*b_g)**0.5
-
+    # #Kelvin-Helmholtz finite-shear layer(Aliseda / Raynal)
+    # u_r = u_g - u_l
+    # b_g = (d_go - d_gi) /2
+    # C = 2.4
+    # lam_KH = 2*C*(rho_l/rho_g)**0.5*(mu_g/rho_g/u_r*b_g)**0.5
 
     #Liquid stream thinning
 
@@ -585,7 +585,7 @@ def twin_fluid_breakup_distribution(d_go, d_gi, u_g, u_l, props, dist_type = 'vo
 
     sizes, dist, d_core, d_32 = breakup_distribution(d_0, u, props, \
                          Model_Core_Breakup = True, core_accel = False, \
-                         dist_func = 'lognorm', dist_type = dist_type, unpack = 1)
+                         dist_func = dist_func, dist_type = dist_type, unpack = 1)
 
 
     if freq == True:
