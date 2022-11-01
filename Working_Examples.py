@@ -89,7 +89,7 @@ plt.tight_layout()
 
 
 
-""" Two-fluid Breakup Model - example implementation """
+""" Twin-fluid Breakup Model - example implementation """
 
 from Breakup_Model import twin_fluid_breakup_distribution
 
@@ -122,7 +122,8 @@ u_l = 0.26      #m/s
 
 
 
-SMD, f, bin_edges, bin_widths, bin_centers = twin_fluid_breakup_distribution(d_go, d_gi, u_g, u_l, props)
+SMD, f, bin_edges, bin_widths, bin_centers = twin_fluid_breakup_distribution(d_go, d_gi, u_g, u_l, props,\
+                                                                             dist_type = 'vol', freq = True, dist_func = 'lognorm')
 
 
 plt.figure()
@@ -141,7 +142,7 @@ plt.axvline(x=SMD, c='r', ls = '-')
 plt.xscale('log')
 plt.xlim(1e0,1e3)
 
-plt.ylabel('Volume frequency : $f_v$ (\%)')
+plt.ylabel('Volume frequency : $f_v$ (%)')
 plt.xlabel('$d$ ($\mu$m)')
 
 plt.tight_layout()
