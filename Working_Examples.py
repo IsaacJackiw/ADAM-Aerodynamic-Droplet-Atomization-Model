@@ -6,9 +6,10 @@ Created on Tue Jun 21 08:51:30 2022
 
 
 This code provides basic working examples of the models developed in the following works:
-    - Jackiw, I. M., and Ashgriz, N., 2021, “On Aerodynamic Droplet Breakup,” J. Fluid Mech., 913(A33). https://doi.org/10.1017/jfm.2021.7
-    - Jackiw, I. M., and Ashgriz, N., 2022, “Prediction of the Droplet Size Distribution in Aerodynamic Droplet Breakup,” J. Fluid Mech., 940, p. A17. https://doi.org/10.1017/jfm.2022.249
-    - Jackiw, I.M., and Ashgriz, N., "Prediction of the Droplet Size Distribution From Twin-Fluid Sprays", submitted July 11, 2022
+
+   - Jackiw, I. M., and Ashgriz, N., 2021, “On Aerodynamic Droplet Breakup,” J. Fluid Mech., 913(A33). https://doi.org/10.1017/jfm.2021.7
+   - Jackiw, I. M., and Ashgriz, N., 2022, “Prediction of the Droplet Size Distribution in Aerodynamic Droplet Breakup,” J. Fluid Mech., 940, p. A17. https://doi.org/10.1017/jfm.2022.249
+   - Jackiw, I. M., and Ashgriz, N., "Aerodynamic Droplet Atomization Model (ADAM): A Prediction of the Droplet Size Distribution For Twin-Fluid Nozzles", revision submitted October 25, 2022 (JFM-22-1137.R1)
 
 This code is made available for the purpose of sharing the contained models so that they can be more readily used and improved upon by others.    
 Any works that implement or build from this code should cite the above references.
