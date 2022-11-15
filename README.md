@@ -10,7 +10,9 @@ This project provides code for the models developed in the following works:
 This code is made available for the purpose of sharing the contained models so that they can be more readily used and improved upon by others.
 Any works that implement or build from this code should cite the above references.
 
-The file "Breakup_Models.py" contains the models, while "Working_Examples.py" provides basic working examples of their implementation.
+The file "Breakup_Models.py" contains the models, while "Working_Examples.py" provides basic working examples of their implementation. The video below provides a tutorial on how to use the model for users who are not familiar with Python.
+
+https://user-images.githubusercontent.com/109104230/201980591-1c7e6667-d6b2-46a0-98d1-e365d18340d2.mp4
 
 The code was written by the author in Python 3.7.9 using the Spyder 4.2.0 IDE from Anaconda (https://www.anaconda.com/)
     and is not guaranteed to work on any other platform without modification.
@@ -21,3 +23,9 @@ Note: The author of this code is not a professional program developer.
 Make it a great day,
 
 Isaac
+
+
+
+
+
+
